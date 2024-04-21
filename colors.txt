@@ -1,0 +1,14 @@
+ colors: {
+      light: {
+        background: "#f3f3f3",  
+        objects: "#fcfcfc",
+        borders: "#e8e8e8",
+        focus: "#fbfbfb"
+      },
+      dark: {
+        background: "#202020",
+        objects: "#2b2b2b",
+        borders: "#1d1d1d",
+        focus: "#3d3d3d"
+      },
+    },

@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply w-full h-full bg-[#f3f3f3] dark:bg-[#202020];
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-300 dark:bg-[#23272f]; /* Color de fondo del track */
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full dark:bg-[#4f5259];
+}
+/* 
+::-webkit-scrollbar-button:start {
+  display: block; 
+  background-color: #ddd; 
+}
+
+::-webkit-scrollbar-button:end {
+  display: block; 
+  background-color: #ddd;
+} */
