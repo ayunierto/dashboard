@@ -1,21 +1,18 @@
 import { useContext } from "react";
 
-import { dashboardRoutes } from "../../../../router/router";
-import { SidebarMenuItem } from "./";
 import { DashboardContext } from "../../context";
-
-export const SidebarMenu = () => {
+interface Props {
+  children: JSX.Element[]
+}
+export const SidebarMenu = ({ children }: Props) => {
   const { isSidebarOpen, isSidebarHover } = useContext(DashboardContext);
 
   return (
     <ul
-      className={`${
-        isSidebarOpen || (!isSidebarOpen && isSidebarHover) ? "px-4" : ""
-      } h-full`}
+      className={`${isSidebarOpen || (!isSidebarOpen && isSidebarHover) ? "px-4" : ""
+        } h-full`}
     >
-      {dashboardRoutes.map((route) => (
-        <SidebarMenuItem key={route.label} {...route} />
-      ))}
+      {children}
     </ul>
   );
 };

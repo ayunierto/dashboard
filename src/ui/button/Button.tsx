@@ -10,6 +10,7 @@ interface Props {
   | "danger";
   variant?: "solid" | "bordered" | "light";
   onClick?: () => void;
+  type?: 'button' | 'reset' | 'submit';
 }
 
 export const Button = ({
@@ -18,9 +19,11 @@ export const Button = ({
   children,
   variant,
   color,
+  type
 }: Props) => {
   return (
     <button
+      type={type}
       className={`px-3 py-2 rounded-md transition-all duration-300 flex justify-center items-center gap-3 select-none ${className} ${variant === "solid"
         ? `${color === "primary"
           ? "text-white bg-blue-600 hover:bg-blue-700"

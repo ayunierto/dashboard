@@ -4,5 +4,5 @@ interface Props {
   className?: string;
 }
 export const ModalBody = ({ children, className }: Props) => {
-  return <p className={`my-2 ${className}`}>{children}</p>;
+  return <div className={`my-2 ${className}`}>{children}</div>;
 };

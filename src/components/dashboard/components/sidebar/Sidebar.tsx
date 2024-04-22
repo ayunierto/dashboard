@@ -1,7 +1,10 @@
 import { useSidebar } from "../../hooks/useSidebar";
-import { SidebarLogo, SidebarMenu } from "./";
 
-export const Sidebar = () => {
+interface Props {
+  children: JSX.Element[]
+}
+
+export const Sidebar = ({ children }: Props) => {
   const {
     sidebarRef,
     handleMouseEnter,
@@ -15,15 +18,13 @@ export const Sidebar = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       ref={sidebarRef}
-      className={`${
-        isSidebarOpen ||
+      className={`${isSidebarOpen ||
         (!isSidebarOpen && isSidebarHover && window.innerWidth > 640)
-          ? "w-72 visible"
-          : "-translate-x-72 sm:-translate-x-0 w-16 invisible"
-      } fixed sm:visible top-0 left-0 h-screen bg-[#f3f3f3] border-r border-[#e8e8e8] dark:border-[#1d1d1d] dark:bg-[#202020] z-20 shadow-md transition-all`}
+        ? "w-72 visible"
+        : "-translate-x-72 sm:-translate-x-0 w-16 invisible"
+        } fixed sm:visible top-0 left-0 h-screen bg-[#f3f3f3] border-r border-[#e8e8e8] dark:border-[#1d1d1d] dark:bg-[#202020] z-20 shadow-md transition-all duration-300`}
     >
-      <SidebarLogo />
-      <SidebarMenu />
+      {children}
     </div>
   );
 };

@@ -35,7 +35,7 @@ export const LoginPage = () => {
           </div>
 
           <Button
-            className="w-full text-blue-600"
+            className="w-full"
             variant="bordered"
             color="primary"
           >

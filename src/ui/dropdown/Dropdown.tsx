@@ -64,7 +64,7 @@ export const Dropdown = ({
         className={`${!isOpen
           ? "invisible opacity-0"
           : "visible opacity-100 translate-y-0 scale-100"
-          } bg-[#fcfcfc] rounded-md absolute mt-1 p-2 border dark:border-[#1d1d1d] shadow-lg z-10 dark:bg-[#2b2b2b] transition-all duration-300 transform origin-top-right -translate-y-2 ${menuRight ? "right-0" : "left-0"
+          } bg-[#fcfcfc] rounded-md absolute mt-1 p-1 border dark:border-[#1d1d1d] shadow-lg z-10 dark:bg-[#2b2b2b] transition-all duration-300 transform origin-top-right -translate-y-2 ${menuRight ? "right-0" : "left-0"
           }`}
       >
         {children}

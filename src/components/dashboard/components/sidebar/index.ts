@@ -3,3 +3,4 @@ export * from "./SidebarLogo";
 export * from "./SidebarMenu";
 export * from "./SidebarMenuItem";
 export * from "./SidebarMenuDropdown";
+export * from './SidebarLogoName'
